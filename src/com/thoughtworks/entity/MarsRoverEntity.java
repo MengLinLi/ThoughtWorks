@@ -1,19 +1,18 @@
 package com.thoughtworks.entity;
 
-import com.thoughtworks.imp.MarsRover;
-
 public class MarsRoverEntity {
 
     private int positionX;
     private int positionY;
-    private String order;
+
+    private String direction;
 
     public MarsRoverEntity(){}
 
-    public MarsRoverEntity(int positionX, int positionY, String order) {
+    public MarsRoverEntity(int positionX, int positionY, String order, String direction) {
         this.positionX = positionX;
         this.positionY = positionY;
-        this.order = order;
+        this.direction = direction;
     }
 
     public int getPositionX() {
@@ -32,11 +31,11 @@ public class MarsRoverEntity {
         this.positionY = positionY;
     }
 
-    public String getOrder() {
-        return order;
+    public String getDirection() {
+        return direction;
     }
 
-    public void setOrder(String order) {
-        this.order = order;
+    public void setDirection(String direction) {
+        this.direction = direction;
     }
 }
