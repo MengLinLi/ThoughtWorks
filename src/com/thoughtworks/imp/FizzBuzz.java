@@ -1,11 +1,10 @@
 package com.thoughtworks.imp;
 
+import javax.naming.ldap.SortResponseControl;
+
 public class FizzBuzz {
-    public String say(int i) {
+    public static String execute(int i) {
         StringBuffer result = new StringBuffer();
-        if(String.valueOf(i).contains("3")){
-            return result.append("Fizz").toString();
-        }
         if (i % 3 == 0) {
             result.append("Fizz");
             if (i % 5 == 0) {
@@ -28,4 +27,19 @@ public class FizzBuzz {
         }
         return result.toString();
     }
+
+    public String say(int i){
+        StringBuffer result = new StringBuffer();
+        String temp = String.valueOf(i);
+        if(temp.contains("3")){
+            return result.append("Fizz").toString();
+        }else if (temp.contains("5")){
+            return result.append("Buzz").toString();
+        }else if(temp.contains("7")){
+            return result.append("Whizz").toString();
+        }else {
+            return this.execute(i);
+        }
+    }
+
 }
