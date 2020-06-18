@@ -52,4 +52,78 @@ public class MarsRoverTest {
         Assert.assertEquals(MarsRover.testMarsRoverEntity.getOrder(),"N");
     }
 
+    /**
+     * 前进一步
+     */
+    @Test
+    public void should_return_x_0_y_0_direction_S_when_give_position_given_execute_M(){
+        /*数据初始化*/
+        /*Given*/
+        MarsRoverEntity marsRoverEntity = new MarsRoverEntity(0,0,"S");
+        MarsRover marsRoverInit = new MarsRover();
+        marsRoverInit.init(marsRoverEntity);
+
+        /*Given*/
+        String order = "M";
+
+        /*When*/
+        MarsRover marsRover = new MarsRover();
+        marsRover.executM();
+
+        /*Then*/
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionX(),0);
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionY(),-1);
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getOrder(),"S");
+    }
+
+    /**
+     * 前进一步
+     */
+    @Test
+    public void should_return_x_0_y_0_direction_W_when_give_position_given_execute_M(){
+        /*数据初始化*/
+        /*Given*/
+        MarsRoverEntity marsRoverEntity = new MarsRoverEntity(0,0,"W");
+        MarsRover marsRoverInit = new MarsRover();
+        marsRoverInit.init(marsRoverEntity);
+
+        /*Given*/
+        String order = "M";
+
+        /*When*/
+        MarsRover marsRover = new MarsRover();
+        marsRover.executM();
+
+        /*Then*/
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionX(),-1);
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionY(),0);
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getOrder(),"W");
+    }
+
+    /**
+     * 前进一步
+     */
+    @Test
+    public void should_return_x_0_y_0_direction_E_when_give_position_given_execute_M(){
+        /*数据初始化*/
+        /*Given*/
+        MarsRoverEntity marsRoverEntity = new MarsRoverEntity(0,0,"E");
+        MarsRover marsRoverInit = new MarsRover();
+        marsRoverInit.init(marsRoverEntity);
+
+        /*Given*/
+        String order = "M";
+
+        /*When*/
+        MarsRover marsRover = new MarsRover();
+        marsRover.executM();
+
+        /*Then*/
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionX(),1);
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionY(),0);
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getOrder(),"E");
+    }
+
+
+
 }
