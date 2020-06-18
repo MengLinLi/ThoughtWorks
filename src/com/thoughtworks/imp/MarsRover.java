@@ -11,7 +11,7 @@ public class MarsRover {
     }
 
     public void executM() {
-        String direction = testMarsRoverEntity.getOrder();
+        String direction = testMarsRoverEntity.getDirection();
         switch (direction){
             case "N" :
                 testMarsRoverEntity.setPositionY(testMarsRoverEntity.getPositionY() + 1);
@@ -24,6 +24,24 @@ public class MarsRover {
                 break;
             case "E" :
                 testMarsRoverEntity.setPositionX(testMarsRoverEntity.getPositionX() + 1);
+                break;
+        }
+    }
+
+    public void executL() {
+        String direction = testMarsRoverEntity.getDirection();
+        switch (direction){
+            case "N" :
+                testMarsRoverEntity.setDirection("W");
+                break;
+            case "S" :
+                testMarsRoverEntity.setDirection("E");
+                break;
+            case "W" :
+                testMarsRoverEntity.setDirection("S");
+                break;
+            case "E" :
+                testMarsRoverEntity.setDirection("N");
                 break;
         }
     }

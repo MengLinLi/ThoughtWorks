@@ -9,7 +9,7 @@ public class MarsRoverEntity {
 
     public MarsRoverEntity(){}
 
-    public MarsRoverEntity(int positionX, int positionY, String order, String direction) {
+    public MarsRoverEntity(int positionX, int positionY, String direction) {
         this.positionX = positionX;
         this.positionY = positionY;
         this.direction = direction;

@@ -25,14 +25,14 @@ public class MarsRoverTest {
         /*Then*/
         Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionX(),0);
         Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionY(),0);
-        Assert.assertEquals(MarsRover.testMarsRoverEntity.getOrder(),"N");
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getDirection(),"N");
     }
 
     /**
      * 前进一步
      */
     @Test
-    public void should_return_x_0_y_0_direction_N_when_give_position_given_execute_M(){
+    public void should_return_x_0_y_1_direction_N_when_give_position_given_execute_M(){
         /*数据初始化*/
         /*Given*/
         MarsRoverEntity marsRoverEntity = new MarsRoverEntity(0,0,"N");
@@ -49,14 +49,14 @@ public class MarsRoverTest {
         /*Then*/
         Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionX(),0);
         Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionY(),1);
-        Assert.assertEquals(MarsRover.testMarsRoverEntity.getOrder(),"N");
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getDirection(),"N");
     }
 
     /**
      * 前进一步
      */
     @Test
-    public void should_return_x_0_y_0_direction_S_when_give_position_given_execute_M(){
+    public void should_return_x_0_y__1_direction_S_when_give_position_given_execute_M(){
         /*数据初始化*/
         /*Given*/
         MarsRoverEntity marsRoverEntity = new MarsRoverEntity(0,0,"S");
@@ -73,14 +73,14 @@ public class MarsRoverTest {
         /*Then*/
         Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionX(),0);
         Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionY(),-1);
-        Assert.assertEquals(MarsRover.testMarsRoverEntity.getOrder(),"S");
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getDirection(),"S");
     }
 
     /**
      * 前进一步
      */
     @Test
-    public void should_return_x_0_y_0_direction_W_when_give_position_given_execute_M(){
+    public void should_return_x__1_y_0_direction_W_when_give_position_given_execute_M(){
         /*数据初始化*/
         /*Given*/
         MarsRoverEntity marsRoverEntity = new MarsRoverEntity(0,0,"W");
@@ -97,14 +97,14 @@ public class MarsRoverTest {
         /*Then*/
         Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionX(),-1);
         Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionY(),0);
-        Assert.assertEquals(MarsRover.testMarsRoverEntity.getOrder(),"W");
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getDirection(),"W");
     }
 
     /**
      * 前进一步
      */
     @Test
-    public void should_return_x_0_y_0_direction_E_when_give_position_given_execute_M(){
+    public void should_return_x_1_y_0_direction_E_when_give_position_given_execute_M(){
         /*数据初始化*/
         /*Given*/
         MarsRoverEntity marsRoverEntity = new MarsRoverEntity(0,0,"E");
@@ -121,9 +121,103 @@ public class MarsRoverTest {
         /*Then*/
         Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionX(),1);
         Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionY(),0);
-        Assert.assertEquals(MarsRover.testMarsRoverEntity.getOrder(),"E");
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getDirection(),"E");
     }
 
+    /**
+     * 前进一步
+     */
+    @Test
+    public void should_return_x_0_y_0_direction_W_when_give_position_given_execute_L(){
+        /*数据初始化*/
+        /*Given*/
+        MarsRoverEntity marsRoverEntity = new MarsRoverEntity(0,0,"N");
+        MarsRover marsRoverInit = new MarsRover();
+        marsRoverInit.init(marsRoverEntity);
 
+        /*Given*/
+        String order = "L";
+
+        /*When*/
+        MarsRover marsRover = new MarsRover();
+        marsRover.executL();
+
+        /*Then*/
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionX(),0);
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionY(),0);
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getDirection(),"W");
+    }
+
+    /**
+     * 前进一步
+     */
+    @Test
+    public void should_return_x_0_y_0_direction_E_when_give_position_given_execute_L(){
+        /*数据初始化*/
+        /*Given*/
+        MarsRoverEntity marsRoverEntity = new MarsRoverEntity(0,0,"S");
+        MarsRover marsRoverInit = new MarsRover();
+        marsRoverInit.init(marsRoverEntity);
+
+        /*Given*/
+        String order = "M";
+
+        /*When*/
+        MarsRover marsRover = new MarsRover();
+        marsRover.executL();
+
+        /*Then*/
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionX(),0);
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionY(),0);
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getDirection(),"E");
+    }
+
+    /**
+     * 前进一步
+     */
+    @Test
+    public void should_return_x_0_y_0_direction_S_when_give_position_given_execute_L(){
+        /*数据初始化*/
+        /*Given*/
+        MarsRoverEntity marsRoverEntity = new MarsRoverEntity(0,0,"W");
+        MarsRover marsRoverInit = new MarsRover();
+        marsRoverInit.init(marsRoverEntity);
+
+        /*Given*/
+        String order = "M";
+
+        /*When*/
+        MarsRover marsRover = new MarsRover();
+        marsRover.executL();
+
+        /*Then*/
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionX(),0);
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionY(),0);
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getDirection(),"S");
+    }
+
+    /**
+     * 前进一步
+     */
+    @Test
+    public void should_return_x_0_y_0_direction_N_when_give_position_given_execute_L(){
+        /*数据初始化*/
+        /*Given*/
+        MarsRoverEntity marsRoverEntity = new MarsRoverEntity(0,0,"E");
+        MarsRover marsRoverInit = new MarsRover();
+        marsRoverInit.init(marsRoverEntity);
+
+        /*Given*/
+        String order = "L";
+
+        /*When*/
+        MarsRover marsRover = new MarsRover();
+        marsRover.executL();
+
+        /*Then*/
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionX(),0);
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getPositionY(),0);
+        Assert.assertEquals(MarsRover.testMarsRoverEntity.getDirection(),"N");
+    }
 
 }
