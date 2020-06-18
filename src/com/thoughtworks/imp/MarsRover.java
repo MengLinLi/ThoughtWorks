@@ -20,10 +20,10 @@ public class MarsRover {
                 testMarsRoverEntity.setPositionY(testMarsRoverEntity.getPositionY() - 1);
                 break;
             case "W" :
-                testMarsRoverEntity.setPositionY(testMarsRoverEntity.getPositionX() - 1);
+                testMarsRoverEntity.setPositionX(testMarsRoverEntity.getPositionX() - 1);
                 break;
             case "E" :
-                testMarsRoverEntity.setPositionY(testMarsRoverEntity.getPositionX() + 1);
+                testMarsRoverEntity.setPositionX(testMarsRoverEntity.getPositionX() + 1);
                 break;
         }
     }
