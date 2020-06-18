@@ -3,13 +3,15 @@ package com.thoughtworks.imp;
 public class FizzBuzz {
     public String say(int i) {
         StringBuffer result = new StringBuffer();
-        if (i % 3 == 0) {
+        if (i % 3 == 0 || String.valueOf(i).matches("3")) {
             result.append("Fizz");
             if (i % 5 == 0) {
                 result.append("Buzz");
                 if (i % 7 == 0) {
                     result.append("Whizz");
                 }
+            }else if (i % 7 == 0){
+                result.append("Whizz");
             }
         } else if (i % 5 == 0) {
             result.append("Buzz");
