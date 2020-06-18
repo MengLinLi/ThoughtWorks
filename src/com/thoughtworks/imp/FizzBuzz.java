@@ -3,7 +3,10 @@ package com.thoughtworks.imp;
 public class FizzBuzz {
     public String say(int i) {
         StringBuffer result = new StringBuffer();
-        if (i % 3 == 0 || String.valueOf(i).matches("3")) {
+        if(String.valueOf(i).contains("3")){
+            return result.append("Fizz").toString();
+        }
+        if (i % 3 == 0) {
             result.append("Fizz");
             if (i % 5 == 0) {
                 result.append("Buzz");
