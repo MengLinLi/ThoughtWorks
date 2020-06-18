@@ -10,4 +10,21 @@ public class MarsRover {
         testMarsRoverEntity = marsRoverEntity;
     }
 
+    public void executM() {
+        String direction = testMarsRoverEntity.getOrder();
+        switch (direction){
+            case "N" :
+                testMarsRoverEntity.setPositionY(testMarsRoverEntity.getPositionY() + 1);
+                break;
+            case "S" :
+                testMarsRoverEntity.setPositionY(testMarsRoverEntity.getPositionY() - 1);
+                break;
+            case "W" :
+                testMarsRoverEntity.setPositionY(testMarsRoverEntity.getPositionX() - 1);
+                break;
+            case "E" :
+                testMarsRoverEntity.setPositionY(testMarsRoverEntity.getPositionX() + 1);
+                break;
+        }
+    }
 }
