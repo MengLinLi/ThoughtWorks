@@ -97,4 +97,16 @@ public class FizzBuzzTests {
         assertThat(result,is("Fizz"));
     }
 
+    @Test
+    public void shoud_return_FizzBuzzWhizz_given_105_when_say(){
+        /*given*/
+
+        /*when*/
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.say(105);
+
+        /*then*/
+        assertThat(result,is("FizzBuzzWhizz"));
+    }
+
 }
